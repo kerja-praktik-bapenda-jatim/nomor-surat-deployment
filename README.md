@@ -39,12 +39,13 @@ nvm install 22
 ```
 git clone https://github.com/kerja-praktik-bapenda-jatim/nomor-surat-be ~/bapenda/be
 ```
+Add database credentials
 ```
 cd bapenda/be && nano config/config.json
 ```
 Add ```JWT_SECRET``` and ```PORT```
 ```
-nano .env.development
+nano .env.production
 ```
 ```
 curl -L -o data.zip "https://drive.google.com/uc?export=download&id=1ywEKUhXWtfh7M4MtaTAYiY9MOP9F6-La"
@@ -72,9 +73,9 @@ Description=Penomoran Surat Backend
 After=network.target
 
 [Service]
-ExecStart=/path/to/node server.js
+Environment="PATH=/path/to/node/bin:/usr/bin:/bin"
+ExecStart=/path/to/npm run prod
 Restart=always
-Environment=NODE_ENV=production
 WorkingDirectory=/path/to/backend/repository
 ```
 
