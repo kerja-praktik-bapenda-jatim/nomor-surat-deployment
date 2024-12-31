@@ -128,7 +128,7 @@ npm run build
 ```
 which node
 ```
-```/etc/systemd/system/nomor-surat-be.service```
+```/etc/systemd/system/nomor-surat-fe.service```
 ```
 [Unit]
 Description=Penomoran Surat Frontend
