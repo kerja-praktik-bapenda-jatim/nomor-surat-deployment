@@ -97,6 +97,9 @@ Environment="PATH=/path/to/node/bin:/usr/bin:/bin"
 ExecStart=/path/to/npm run prod
 Restart=always
 WorkingDirectory=/path/to/backend/repository
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 7. Enable and start service
