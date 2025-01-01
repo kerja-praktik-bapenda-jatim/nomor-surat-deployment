@@ -74,8 +74,12 @@ npm install
 ```
 
 5. Seed database
+- Run the server one time to create the table
 ```
-npx sequelize-cli db:seed:all
+npm run prod
+```
+```
+NODE_ENV=production npx sequelize-cli db:seed:all
 ```
 
 6. Create Service
