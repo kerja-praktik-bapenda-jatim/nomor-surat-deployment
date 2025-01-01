@@ -22,6 +22,22 @@ CREATE DATABASE `nomor-surat`;
 ```
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root';
 ```
+```
+CREATE USER 'root'@'%' IDENTIFIED BY 'root';
+```
+```
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'%';
+```
+```
+FLUSH PRIVILEGES;
+```
+- exit mysql then update mysql config ```/etc/mysql/mysql.conf.d/mysqld.cnf```
+change bind-address to ```0.0.0.0```
+
+- restart mysql
+```
+sudo systemctl restart mysql.service
+```
 
 3. Setup NVM
 ```
@@ -39,11 +55,11 @@ nvm install 22
 ```
 git clone https://github.com/kerja-praktik-bapenda-jatim/nomor-surat-be ~/bapenda/be
 ```
-Add database credentials
+- Add database credentials
 ```
 cd bapenda/be && nano config/config.json
 ```
-Add ```JWT_SECRET``` and ```PORT```
+- Add ```JWT_SECRET``` and ```PORT```
 ```
 nano .env.production
 ```
@@ -86,13 +102,13 @@ sudo systemctl enable nomor-surat-be.service
 ```
 sudo systemctl start nomor-surat-be.service
 ```
-Check the log:
+- Check the log:
 ```
 sudo journalctl -u nomor-surat-be.service -f
 ```
 
 8. Test
-check ip
+- check ip
 ```
 curl ifconfig.me
 ```
@@ -112,15 +128,15 @@ git clone https://github.com/kerja-praktik-bapenda-jatim/nomor-surat-fe ~/bapend
 ```
 sudo bapenda/fe && npm install
 ```
-change ```API_BASE_URL``` to the ip
+- change ```API_BASE_URL``` to the ip
 ```
 nano next.config.js
 ```
-change the start command to ```next start -H 0.0.0.0 -p 80```
+- change the start command to ```next start -H 0.0.0.0 -p 80```
 ```
 nano package.json
 ```
-Build
+- Build
 ```
 npm run build
 ```
