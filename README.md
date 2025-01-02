@@ -59,12 +59,12 @@ git clone https://github.com/kerja-praktik-bapenda-jatim/nomor-surat-be ~/bapend
 ```
 cd bapenda/be && nano config/config.json
 ```
-- Add ```JWT_SECRET``` and ```PORT```
+- Add ```JWT_SECRET```, ```PORT```, and ```UPLOAD_DIR```
 ```
 nano .env.production
 ```
 ```
-curl -L -o data.zip "https://drive.google.com/uc?export=download&id=1ywEKUhXWtfh7M4MtaTAYiY9MOP9F6-La"
+curl -L -o data.zip "https://drive.google.com/uc?export=download&id=1VLOV1WdChM3Gs_Ci3TLqklxFhl4aCW7u"
 ```
 ```
 unzip data.zip
