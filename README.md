@@ -191,7 +191,7 @@ cd ~
 git clone https://github.com/kerja-praktik-bapenda-jatim/nomor-surat-fe ~/bapenda/fe
 ```
 ```
-sudo bapenda/fe && npm install
+cd bapenda/fe && npm install
 ```
 - change ```API_BASE_URL``` to the ip
 ```
