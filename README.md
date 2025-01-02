@@ -59,12 +59,70 @@ git clone https://github.com/kerja-praktik-bapenda-jatim/nomor-surat-be ~/bapend
 ```
 cd bapenda/be && nano config/config.json
 ```
+```
+
+{
+  "development": {
+    "username": "",
+    "password": "",
+    "database": "",
+    "host": "",
+    "port": "",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    },
+    "define": {
+      "underscored": true
+    }
+  },
+  "test": {
+    "username": "${TEST_DB_USERNAME}",
+    "password": "${TEST_DB_PASSWORD}",
+    "database": "${TEST_DB_NAME}",
+    "host": "${TEST_DB_HOST}",
+    "port": "${TEST_DB_PORT}",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    },
+    "define": {
+      "underscored": true
+    }
+  },
+  "production": {
+    "username": "root",
+    "password": "bapendaroot2025",
+    "database": "nomor-surat",
+    "host": "localhost",
+    "port": "3306",
+    "dialect": "mysql",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    },
+    "define": {
+      "underscored": true
+    }
+  }
+}
+
+
+```
 - Add ```JWT_SECRET```, ```PORT```, and ```UPLOAD_DIR```
 ```
 nano .env.production
 ```
 ```
-curl -L -o data.zip "https://drive.google.com/uc?export=download&id=1VLOV1WdChM3Gs_Ci3TLqklxFhl4aCW7u"
+curl -L -o data.zip "https://drive.google.com/uc?export=download&id=1EmzUJcwX4CaJdhHvO7Vg5QnDJqqfdp2r"
 ```
 ```
 unzip data.zip
