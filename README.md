@@ -9,7 +9,10 @@ sudo apt-get update
 ```
 sudo apt install -y git curl mysql-server unzip
 ```
-
+(tambahkan repository mysql)
+```
+curl -L -o data.zip "https://drive.google.com/uc?export=download&id=1avdTGyp6ufp5zkNJiAv3ct5y-ggxX39y"
+```
 2. Setup MySQL
 - Connect via command line
 ```
